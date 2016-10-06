@@ -2,5 +2,7 @@
 name = "variadic"
 version = "0.1.0"
 authors = ["maik klein <maikklein@googlemail.com>"]
-
+description = "Variadics in stable Rust"
+license = "MIT"
+repository = "https://github.com/MaikKlein/variadic"
 [dependencies]
