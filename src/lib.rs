@@ -3,10 +3,10 @@ pub trait Variadic<T, A = T, B = A, C = B> {
     fn pop(self) -> (Option<T>, Self::OneLess);
 }
 
-pub struct VarArgs4<A, B, C, D>(A, B, C, D);
-pub struct VarArgs3<A, B, C>(A, B, C);
-pub struct VarArgs2<A, B>(A, B);
-pub struct VarArgs1<A>(A);
+pub struct VarArgs4<A, B, C, D>(pub A, pub B, pub C, pub D);
+pub struct VarArgs3<A, B, C>(pub A, pub B, pub C);
+pub struct VarArgs2<A, B>(pub A, pub B);
+pub struct VarArgs1<A>(pub A);
 pub struct VarArgs0<A> {
     _m: std::marker::PhantomData<A>,
 }
