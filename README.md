@@ -24,7 +24,7 @@ fn sum<Args: Variadic<i32>>(args: Args) -> i32 {
 println!("sum: {}", sum(VarArgs4(1, 2, 3, 4)));
 ~~~
 
-Here we call `pop` on `VarArgsN<i32...>` and it will return `(Option<i32>, VarArgs(N-1)<i32...>)`. The recursion stops at `VarArgs0` which will returns a `(Option<i32>, VarArgs0<i32>)` where `Option<i32>` will always be `None`.
+Here we call `pop` on `VarArgsN<i32...>` and it will return `(Option<i32>, VarArgs(N-1)<i32...>)`. The recursion stops at `VarArgs0` which returns a `(Option<i32>, VarArgs0<i32>)` where `Option<i32>` will always be `None`.
 
 ~~~
 fn fact<Args: Variadic<i32>>(args: Args) -> i32 {
